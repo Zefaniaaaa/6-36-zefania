@@ -18,13 +18,22 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', function () {
-    return view ('home');
+    return view ('home', [
+        "title" => "Gallery",    
+    ]);
 });
 
 Route::get('/about', function () {
-    return view ('about');
+    return view ('About', [
+        "title" => "About",
+        "nama" => "Zefania",
+        "email" => "3103120239@student.smktelkom-pwt.sch.id",
+        "gambar" => "zefania.jpeg"
+    ]);
 });
 
 Route::get('/gallery', function () {
-    return view ('gallery');
+    return view ('gallery', [
+        "title" => "Gallery",    
+    ]);
 });
