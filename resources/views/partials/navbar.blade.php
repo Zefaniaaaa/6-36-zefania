@@ -10,7 +10,10 @@
         <a class="nav-link {{ ( $title === 'About' ) ? 'active' : '' }}" href="/about">About</a>
         <a class="nav-link {{ ( $title === 'Gallery' ) ? 'active' : '' }}" href="/gallery">Gallery</a>
         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </div>
+    <li class="nav-item">
+        <a class="nav-link {{ ( $title === 'Contacts') ? 'active' : '' }}" href="/contacts">Contacts Us</a>
+    </li>  
+    </div>
     </div>
   </div>
 </nav>
