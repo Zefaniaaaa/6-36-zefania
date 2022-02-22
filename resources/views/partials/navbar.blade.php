@@ -12,7 +12,16 @@
         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
     <li class="nav-item">
         <a class="nav-link {{ ( $title === 'Contacts') ? 'active' : '' }}" href="/contacts">Contacts Us</a>
-    </li>  
+    </li>
+</ul>
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="{{route ('login')}}">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{route ('register')}}">Register</a>
+      </li>
+    </ul>
     </div>
     </div>
   </div>
