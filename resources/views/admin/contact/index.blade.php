@@ -24,19 +24,26 @@
                                                 <th>Nama</th>
                                                 <th>Email</th>
                                                 <th>Pesan</th>
+                                                <th>Aksi</th>
                                             </tr>
                                         </thead>
+                                        @foreach ($contact as $index => $c)
                                         <tbody>
-                                            @foreach ($contact as $index => $contact)
+                                          
                                             <tr>
                                                 <td>{{ $index + 1}}</td>
-                                                <td>{{ $contact->nama}}</td>
-                                                <td>{{ $contact->email}}</td>
-                                                <td>{{ $contact->pesan}}</td>
-                                            </tr> 
-                                            @endforeach
-                                            
+                                                <td>{{ $c->nama}}</td>
+                                                <td>{{ $c->email}}</td>
+                                                <td>{{ $c->pesan}}</td>
+                                                <td>
+                                                    <a href="{{ route('contacts.edit', $c->id)}}">Edit</i></a>
+                                                    
+                                                    <a href="{{ route('contacts.destroy', $c->id)}}">Delete</i></a>
+                                                </td>
+                                            </tr>                               
                                         </tbody>
+                                       
+                                        @endforeach
                                     </table>
                                     {{ $contact->links() }}
                                 </div>

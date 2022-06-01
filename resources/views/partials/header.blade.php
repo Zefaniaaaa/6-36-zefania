@@ -6,7 +6,7 @@
                                 
                             </form>
                             <div class="header-button">
-
+                                @auth
                                 <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
                                         <div class="image">
@@ -43,6 +43,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                @endauth
                             </div>
                         </div>
                     </div>
